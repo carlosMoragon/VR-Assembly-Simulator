@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TarjetaGrafica
   - Memoria
+  - Cylinder
   layers:
   - Default
   - TransparentFX
