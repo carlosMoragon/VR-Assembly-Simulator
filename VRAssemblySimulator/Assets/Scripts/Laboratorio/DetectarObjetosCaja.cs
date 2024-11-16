@@ -5,13 +5,14 @@ using UnityEngine;
 public class DetectarObjetosCaja: MonoBehaviour
 {
     public GameObject puerta;
+    public GameObject objetoConScriptDetectarEtiqueta;
 
-    private Vector3 posicionInicialLocal = new Vector3(-0.18385f, 0f, 0.3f);
-    private Vector3 posicionFinalLocal = new Vector3(-0.18385f, 0f, 0.881f);
+    private Vector3 posicionInicialLocal = new Vector3(-0.18385f, 0.6f, 0f);
+    private Vector3 posicionFinalLocal = new Vector3(-0.18385f, 1.135f, 0f);
 
     private float duracionMovimiento = 2f;
 
-    private string tagObjetivo = "TarjetaGrafica";
+    private string tagObjetivo = null;
 
     void Start()
     {
@@ -38,9 +39,18 @@ public class DetectarObjetosCaja: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Objeto detectado");
+        tagObjetivo = objetoConScriptDetectarEtiqueta.GetComponent<DetectorEtiquetas>().ObtenerTagObjeto();
 
-        StartCoroutine(SecuenciaCerrarYReabrirPuerta(other));
+        if (tagObjetivo != null)
+        {
+            Debug.Log("Tag detectado: " + tagObjetivo);
+            objetoConScriptDetectarEtiqueta.GetComponent<DetectorEtiquetas>().VolverAPosicion(other.tag);
+            StartCoroutine(SecuenciaCerrarYReabrirPuerta(other));
+        }
+        else
+        {
+            Debug.Log("Esperando que se detecte el tag en el otro objeto...");
+        }
     }
 
     private IEnumerator SecuenciaCerrarYReabrirPuerta(Collider other)
