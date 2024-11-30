@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - DiscoDuro
-  - CPU
-=======
-  - TarjetaGrafica
-  - Memoria
-  - Cylinder
->>>>>>> cd78989c7baca6588c7dc4d85c318c71f150dc77
+  tags: []
   layers:
   - Default
   - TransparentFX
