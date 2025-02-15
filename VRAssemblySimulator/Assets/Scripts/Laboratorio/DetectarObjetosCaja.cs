@@ -56,19 +56,22 @@ public class DetectarObjetosCaja: MonoBehaviour
     private IEnumerator SecuenciaCerrarYReabrirPuerta(Collider other)
     {
         yield return new WaitForSeconds(1f);
-
         yield return StartCoroutine(MoverPuerta(posicionFinalLocal, posicionInicialLocal, duracionMovimiento));
 
         if (other.CompareTag(tagObjetivo))
         {
             Debug.Log("Correcto");
+            GameManager.instance.SumarAcierto();
             Destroy(other.gameObject);
         }
         else
         {
             Debug.Log("Incorrecto");
+            GameManager.instance.SumarFallo();
         }
+
         yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(MoverPuerta(posicionInicialLocal, posicionFinalLocal, duracionMovimiento));
     }
+
 }
