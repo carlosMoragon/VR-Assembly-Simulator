@@ -4,8 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - TarjetaGrafica
-  - Memoria
+  - DiscoDuro
+  - CPU
+  - tornillo
+  - Fuente
+  - GPU
+  - PlacaBase
+  - RAM
+  - Refrigeracion
+  - UAlmacenamiento
+  - Ventilador
   layers:
   - Default
   - TransparentFX
