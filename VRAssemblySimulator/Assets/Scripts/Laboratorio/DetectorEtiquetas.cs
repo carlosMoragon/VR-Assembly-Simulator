@@ -10,6 +10,9 @@ public class DetectorEtiquetas : MonoBehaviour
 
     private string tagObjetoDetectado = null;
     private Collider objetoEntrado = null;
+    
+    private HashSet<string> etiquetasValidas = new HashSet<string> { "DiscoDuro", "CPU", "Fuente", "GPU", "PlacaBase", "RAM", "Refrigeracion", "UAlmacenamiento", "Ventilador" };
+    private Vector3 posicionDestinoObjetos = new Vector3(2.81f, 0.9592f, -0.6054f);
 
     void Start()
     {
@@ -67,6 +70,11 @@ public class DetectorEtiquetas : MonoBehaviour
     {
         tagObjetoDetectado = other.tag;
         objetoEntrado = other;
+
+        if (etiquetasValidas.Contains(other.tag))
+        {
+            other.transform.position = posicionDestinoObjetos;
+        }
     }
 
     private void OnTriggerExit(Collider other)
