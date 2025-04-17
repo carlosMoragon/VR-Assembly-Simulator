@@ -13,6 +13,8 @@ public class DetectarObjetosCaja: MonoBehaviour
     private float duracionMovimiento = 2f;
 
     private string tagObjetivo = null;
+    private Collider objetoEnCaja = null;
+    private bool secuenciaEnCurso = false;
 
     void Start()
     {
@@ -39,18 +41,28 @@ public class DetectarObjetosCaja: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        objetoEnCaja = other;
         tagObjetivo = objetoConScriptDetectarEtiqueta.GetComponent<DetectorEtiquetas>().ObtenerTagObjeto();
 
-        if (tagObjetivo != null)
+        if (!secuenciaEnCurso)
+            StartCoroutine(EsperarYProcesar());
+    }
+
+    private IEnumerator EsperarYProcesar()
+    {
+        secuenciaEnCurso = true;
+
+        while (objetoEnCaja == null || string.IsNullOrEmpty(tagObjetivo))
         {
-            Debug.Log("Tag detectado: " + tagObjetivo);
-            objetoConScriptDetectarEtiqueta.GetComponent<DetectorEtiquetas>().VolverAPosicion(other.tag);
-            StartCoroutine(SecuenciaCerrarYReabrirPuerta(other));
+            tagObjetivo = objetoConScriptDetectarEtiqueta.GetComponent<DetectorEtiquetas>().ObtenerTagObjeto();
+            yield return null;
         }
-        else
-        {
-            Debug.Log("Esperando que se detecte el tag en el otro objeto...");
-        }
+
+        objetoConScriptDetectarEtiqueta.GetComponent<DetectorEtiquetas>().VolverAPosicion(objetoEnCaja.tag);
+        yield return StartCoroutine(SecuenciaCerrarYReabrirPuerta(objetoEnCaja));
+
+        objetoEnCaja = null;
+        secuenciaEnCurso = false;
     }
 
     private IEnumerator SecuenciaCerrarYReabrirPuerta(Collider other)
@@ -58,20 +70,17 @@ public class DetectarObjetosCaja: MonoBehaviour
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(MoverPuerta(posicionFinalLocal, posicionInicialLocal, duracionMovimiento));
 
-        if (other.CompareTag(tagObjetivo))
+        if (other != null && other.CompareTag(tagObjetivo))
         {
-            Debug.Log("Correcto");
             GameManager.instance.SumarAcierto();
             Destroy(other.gameObject);
         }
         else
         {
-            Debug.Log("Incorrecto");
             GameManager.instance.SumarFallo();
         }
 
         yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(MoverPuerta(posicionInicialLocal, posicionFinalLocal, duracionMovimiento));
     }
-
 }

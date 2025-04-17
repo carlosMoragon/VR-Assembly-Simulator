@@ -10,14 +10,13 @@ public class DetectorEtiquetas : MonoBehaviour
 
     private string tagObjetoDetectado = null;
     private Collider objetoEntrado = null;
-    
+
     private HashSet<string> etiquetasValidas = new HashSet<string> { "DiscoDuro", "CPU", "Fuente", "GPU", "PlacaBase", "RAM", "Refrigeracion", "UAlmacenamiento", "Ventilador" };
     private Vector3 posicionDestinoObjetos = new Vector3(2.81f, 0.9592f, -0.6054f);
 
     void Start()
     {
         transform.localPosition = posicionRelativaInicial;
-
         StartCoroutine(MoverALaPosicion(posicionRelativaFinal, duracion));
     }
 
@@ -37,20 +36,17 @@ public class DetectorEtiquetas : MonoBehaviour
         }
 
         transform.localPosition = destinoRelativo;
-
     }
 
     public void VolverAPosicion(string tag)
     {
         StartCoroutine(MoverALaPosicion(posicionRelativaInicial, duracion));
-
         StartCoroutine(EsperarYComprobar(tag));
     }
 
     private IEnumerator EsperarYComprobar(string tag)
     {
         yield return StartCoroutine(MoverALaPosicion(posicionRelativaInicial, duracion));
-
         yield return new WaitForSeconds(1f);
 
         if (objetoEntrado != null && objetoEntrado.tag == tag)
@@ -79,6 +75,10 @@ public class DetectorEtiquetas : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        tagObjetoDetectado = null;
+        if (other == objetoEntrado)
+        {
+            tagObjetoDetectado = null;
+            objetoEntrado = null;
+        }
     }
 }
