@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{ef3dd25b-bb16-4e32-b6ea-8d451423ac7d}">
+		<property name="assetPath">
+			<value>umbrella-skar-fortune-cookie-main-version-32307-02-25.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>145.50204081632654</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f3913bbd-ec8c-4641-9d87-e65170dd73b7}</destination>
+		</relationship>
+	</object>
+</objects>

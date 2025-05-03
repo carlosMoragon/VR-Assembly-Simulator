@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{5783a5d3-e322-4ad8-a3c9-85b3510a9d63}">
+		<property name="assetPath">
+			<value>Correct Sound Effect.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.0114285714285716</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f3913bbd-ec8c-4641-9d87-e65170dd73b7}</destination>
+		</relationship>
+	</object>
+</objects>

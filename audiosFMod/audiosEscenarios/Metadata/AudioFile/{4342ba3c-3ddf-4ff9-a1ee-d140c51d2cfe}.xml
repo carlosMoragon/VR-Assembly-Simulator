@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{4342ba3c-3ddf-4ff9-a1ee-d140c51d2cfe}">
+		<property name="assetPath">
+			<value>7 Minute Countdown Timer.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>445.12653061224489</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f3913bbd-ec8c-4641-9d87-e65170dd73b7}</destination>
+		</relationship>
+	</object>
+</objects>
