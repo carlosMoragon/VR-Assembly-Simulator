@@ -9,9 +9,13 @@ using FMOD.Studio;
 public class GameManagerClase : MonoBehaviour
 {
     EventInstance fondoClase;
-
     public Slider sliderVolumen;
     public TextMeshPro valorVolumen;
+
+    public Timer_Manager timer; // Asigna tu script Timer desde el inspector
+    public int totalCorrectPieces = 0;
+    public ScoreManager scoreManager;
+    public GameObject scoreScreen;
 
     private void Start()
     {
@@ -54,4 +58,18 @@ public class GameManagerClase : MonoBehaviour
     {
         valorVolumen.text = Mathf.RoundToInt(valor).ToString() + "%";
     }
+
+    public void RegisterCorrectPiece()
+    {
+        totalCorrectPieces++;
+
+        if (totalCorrectPieces >= 9)
+        {
+            timer.StopTimer();
+            scoreManager.StopScore();
+            scoreScreen.SetActive(true);
+    Debug.Log("¡Se colocaron las 9 piezas correctamente! Timer detenido.");
+        }
+    }
+
 }

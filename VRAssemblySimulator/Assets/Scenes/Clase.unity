@@ -5288,6 +5288,7 @@ GameObject:
   - component: {fileID: 1295793559}
   - component: {fileID: 1295793558}
   - component: {fileID: 1295793560}
+  - component: {fileID: 1295793561}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5309,6 +5310,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliderVolumen: {fileID: 858327975}
   valorVolumen: {fileID: 852671430}
+  timer: {fileID: 1295793560}
+  totalCorrectPieces: 0
+  scoreManager: {fileID: 0}
+  scoreScreen: {fileID: 8508005024012677436}
 --- !u!4 &1295793559
 Transform:
   m_ObjectHideFlags: 0
@@ -5337,6 +5342,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer_txt: {fileID: 8508005023043201744}
+--- !u!114 &1295793561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295793557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501b84767ed4faa42bcfc68d319ef175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 100
+  scoreText: {fileID: 1663918378}
+  timePenaltyPerSecond: 0.33333334
+  errorPenalty: 5
 --- !u!1001 &1315357746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6527,7 +6548,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663918376}
   m_LocalRotation: {x: -0, y: -2.8421706e-14, z: -1.4210853e-14, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6535,7 +6556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 450, y: 90, z: -270}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.037, y: 0}
+  m_AnchoredPosition: {x: 0.527, y: 0}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1663918378
@@ -8870,7 +8891,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Puntuacion:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8933,7 +8954,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.534371, y: 2.027481, z: 9.096335, w: 2.72159}
+  m_margin: {x: 9.534371, y: 2.027481, z: 10.069113, w: 2.72159}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
