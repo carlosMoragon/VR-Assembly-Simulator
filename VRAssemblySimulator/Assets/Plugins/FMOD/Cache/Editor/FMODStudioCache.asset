@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: ../audiosFMod/audiosEscenarios/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638818909586051351
+  lastModified: 638818874372406168
   FileSizes: []
   Exists: 1
 --- !u!114 &-8092870587201705356
@@ -126,7 +126,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 4850838743590412499}
   cacheVersion: 131847
-  cacheTime: 638818909586076567
+  cacheTime: 638818874372416122
   SerializableEventsDict:
   - key: event:/Correcto
     index: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   Path: ../audiosFMod/audiosEscenarios/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638818909586076567
+  lastModified: 638818874372416122
   FileSizes:
   - Name: 
     Value: 962
