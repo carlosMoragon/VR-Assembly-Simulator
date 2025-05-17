@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using FMODUnity;
@@ -19,7 +20,9 @@ public class GameManager : MonoBehaviour
     private int fallos = 0;
     private int maxFallos = 3;
     private float tiempoRestante = 422f;
-    private bool contandoTiempo = true;
+
+    public Slider sliderVolumen;
+    public TextMeshPro valorVolumen;
 
     public static GameManager instance;
 
@@ -45,6 +48,13 @@ public class GameManager : MonoBehaviour
         fondo = RuntimeManager.CreateInstance("event:/7MinutosFondo");
         correcto = RuntimeManager.CreateInstance("event:/Correcto");
         incorrecto = RuntimeManager.CreateInstance("event:/Incorrecto");
+
+        float volumenGuardado = PlayerPrefs.GetFloat("volumen_musica", 100f);
+        sliderVolumen.value = volumenGuardado;
+        fondo.setVolume(Mathf.Clamp01(volumenGuardado / 100f));
+        ActualizarTexto(volumenGuardado);
+        sliderVolumen.onValueChanged.AddListener(ActualizarVolumen);
+
         fondo.start();
     }
 
@@ -60,7 +70,6 @@ public class GameManager : MonoBehaviour
         else
         {
             tiempoRestante = 0;
-            contandoTiempo = false;
             tiempoText.text = "Se acabó el tiempo";
         }
 
@@ -101,5 +110,19 @@ public class GameManager : MonoBehaviour
         fondo.release();
         correcto.release();
         incorrecto.release();
+    }
+
+    private void ActualizarVolumen(float valor)
+    {
+        PlayerPrefs.SetFloat("volumen_musica", valor);
+        PlayerPrefs.Save();
+
+        fondo.setVolume(Mathf.Clamp01(valor / 100f));
+        ActualizarTexto(valor);
+    }
+
+    private void ActualizarTexto(float valor)
+    {
+        valorVolumen.text = Mathf.RoundToInt(valor).ToString() + "%";
     }
 }
