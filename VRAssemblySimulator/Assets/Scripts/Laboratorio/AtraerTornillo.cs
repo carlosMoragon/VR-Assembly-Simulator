@@ -33,4 +33,20 @@ public class AtraerTornillo : MonoBehaviour
             tornilloAgarrado.parent = transform;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (tornilloAgarrado != null && other.transform == tornilloAgarrado)
+        {
+            EstadoTornillo estado = tornilloAgarrado.GetComponent<EstadoTornillo>();
+            if (estado != null)
+            {
+                estado.posicion = false;
+            }
+
+            tornilloAgarrado.parent = null;
+            tornilloAgarrado = null;
+            libre = true;
+        }
+    }
 }
