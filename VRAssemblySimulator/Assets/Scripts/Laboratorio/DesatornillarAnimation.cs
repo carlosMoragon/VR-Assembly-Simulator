@@ -7,41 +7,43 @@ public class DesatornillarAnimation : MonoBehaviour
 {
     public Transform punta;
     public float duracion = 2f;
-    public float distancia = 0.2f;
+    public float distancia = 0.03494f;
     private bool enProceso = false;
+
+    public Transform[] opcionesMarcoPuerta;
+    public AtraerTornillo atraeScript;
 
     private void OnTriggerEnter(Collider other)
     {
         if (enProceso) return;
         if (!other.CompareTag("tornillo")) return;
 
-        Rigidbody rbDestornillador = GetComponent<Rigidbody>();
-        if (rbDestornillador != null)
-            rbDestornillador.useGravity = false;
-
-        XRGrabInteractable grab = GetComponent<XRGrabInteractable>();
-        if (grab != null)
-            Destroy(grab);
-
         EstadoTornillo estado = other.GetComponent<EstadoTornillo>();
         if (estado == null) return;
 
-        transform.rotation = Quaternion.Euler(0, 270, 0);
-        Vector3 nuevaPosicion = new Vector3(other.transform.position.x, other.transform.position.y, transform.position.z);
-        transform.position = nuevaPosicion;
-
-        Vector3 direccion = (punta.position - other.transform.position).normalized;
-        float distanciaActual = Vector3.Distance(punta.position, other.transform.position);
-        float ajuste = 0.09f - distanciaActual;
-        transform.position += direccion * ajuste;
-
-        if (estado.posicion && estado.atornillado)
+        if (estado.posicion)
         {
-            StartCoroutine(Desatornillar(other.transform, estado));
-        }
-        else if (estado.posicion && !estado.atornillado)
-        {
-            StartCoroutine(Atornillar(other.transform, estado));
+            Rigidbody rbDestornillador = GetComponent<Rigidbody>();
+            if (rbDestornillador != null)
+                rbDestornillador.useGravity = false;
+
+            XRGrabInteractable grab = GetComponent<XRGrabInteractable>();
+            if (grab != null)
+                Destroy(grab);
+
+            transform.rotation = Quaternion.Euler(0, 270, 0);
+
+            Vector3 nuevaPosicion = other.transform.position + new Vector3(0f, 0f, 0.24f);
+            transform.position = nuevaPosicion;
+
+            if (estado.atornillado)
+            {
+                StartCoroutine(Desatornillar(other.transform, estado));
+            }
+            else
+            {
+                StartCoroutine(Atornillar(other.transform, estado));
+            }
         }
     }
 
@@ -66,12 +68,18 @@ public class DesatornillarAnimation : MonoBehaviour
         rb.isKinematic = false;
 
         if (tornillo.GetComponent<XRGrabInteractable>() == null)
-        {
             tornillo.gameObject.AddComponent<XRGrabInteractable>();
+
+        if (atraeScript != null && atraeScript.tornilloAgarrado != null)
+        {
+            atraeScript.tornilloAgarrado.parent = null;
+            atraeScript.tornilloAgarrado = null;
         }
 
         estado.posicion = false;
         estado.atornillado = false;
+
+        tornillo.parent = null;
 
         RestaurarDestornillador();
         enProceso = false;
@@ -99,11 +107,30 @@ public class DesatornillarAnimation : MonoBehaviour
             rb.useGravity = false;
         }
 
+        Transform padreCorrecto = EncontrarColliderPadre(tornillo.position);
+        if (padreCorrecto != null)
+        {
+            tornillo.parent = padreCorrecto;
+            if (atraeScript != null)
+                atraeScript.tornilloAgarrado = tornillo;
+        }
+
         estado.posicion = true;
         estado.atornillado = true;
 
         RestaurarDestornillador();
         enProceso = false;
+    }
+
+    private Transform EncontrarColliderPadre(Vector3 posTornillo)
+    {
+        foreach (Transform opcion in opcionesMarcoPuerta)
+        {
+            Collider col = opcion.GetComponent<Collider>();
+            if (col != null && col.bounds.Contains(posTornillo))
+                return opcion;
+        }
+        return null;
     }
 
     private void RestaurarDestornillador()
