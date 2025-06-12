@@ -67,6 +67,12 @@ public class DesatornillarAnimation : MonoBehaviour
         rb.useGravity = true;
         rb.isKinematic = false;
 
+        Collider col = tornillo.GetComponent<Collider>();
+        if (col != null)
+        {
+            col.isTrigger = false;
+        }
+
         if (tornillo.GetComponent<XRGrabInteractable>() == null)
             tornillo.gameObject.AddComponent<XRGrabInteractable>();
 
@@ -105,6 +111,12 @@ public class DesatornillarAnimation : MonoBehaviour
         {
             rb.isKinematic = false;
             rb.useGravity = false;
+        }
+
+        Collider col = tornillo.GetComponent<Collider>();
+        if (col != null)
+        {
+            col.isTrigger = true;
         }
 
         Transform padreCorrecto = EncontrarColliderPadre(tornillo.position);

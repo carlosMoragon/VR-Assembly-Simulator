@@ -12,7 +12,7 @@ public class GameManagerClase : MonoBehaviour
     public Slider sliderVolumen;
     public TextMeshPro valorVolumen;
 
-    public Timer_Manager timer; // Asigna tu script Timer desde el inspector
+    public Timer_Manager timer; 
     public int totalCorrectPieces = 0;
     public ScoreManager scoreManager;
     public GameObject scoreScreen;

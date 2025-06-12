@@ -10,23 +10,33 @@ public class AtraerTornillo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (libre && other.CompareTag("tornillo"))
+        if (libre && other.CompareTag("tornillo") )
         {
-            other.isTrigger = true;
-            Vector3 nuevaPos = transform.position + new Vector3(0f, 0f, -0.015f);
-            other.transform.position = nuevaPos;
-            libre = false;
-
-            XRGrabInteractable grab = other.GetComponent<XRGrabInteractable>();
-            if (grab != null)
-            {
-                Destroy(grab);
-            }
-
             EstadoTornillo estado = other.GetComponent<EstadoTornillo>();
-            if (estado != null)
+
+            if (estado.atornillado)
             {
-                estado.posicion = true;
+                Vector3 posNormal = transform.position + new Vector3(0f, 0f, -0.048f);
+                other.transform.position = posNormal;
+                libre = false;
+            }
+            else
+            {
+                other.isTrigger = true;
+                Vector3 nuevaPos = transform.position + new Vector3(0f, 0f, -0.015f);
+                other.transform.position = nuevaPos;
+                libre = false;
+
+                XRGrabInteractable grab = other.GetComponent<XRGrabInteractable>();
+                if (grab != null)
+                {
+                    Destroy(grab);
+                }
+
+                if (estado != null)
+                {
+                    estado.posicion = true;
+                }
             }
 
             tornilloAgarrado = other.transform;

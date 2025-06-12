@@ -5,10 +5,10 @@ using UnityEngine;
 public class Detect_object : MonoBehaviour
 {
     private bool alreadyPlaced = false;
-    private GameManagerClase gameManager;
+    private GameManagerPractica gameManager;
     private void Start()
     {
-        gameManager = FindObjectOfType<GameManagerClase>();
+        gameManager = FindObjectOfType<GameManagerPractica>();
     }
     private void OnTriggerEnter(Collider other)
     {
