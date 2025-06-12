@@ -70,6 +70,7 @@ public class DetectorEtiquetas : MonoBehaviour
         if (etiquetasValidas.Contains(other.tag))
         {
             other.transform.position = posicionDestinoObjetos;
+            other.transform.rotation = Quaternion.Euler(270, 270, 0);
         }
     }
 
