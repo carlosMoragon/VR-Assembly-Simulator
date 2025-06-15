@@ -13,9 +13,10 @@ public class GameManagerClase : MonoBehaviour
     public TextMeshPro valorVolumen;
 
     public Timer_Manager timer; 
-    public int totalCorrectPieces = 0;
+    private int totalCorrectPieces = 0;
     public ScoreManager scoreManager;
     public GameObject scoreScreen;
+    public GameObject menuReturn;
     public GameObject puertaTorrePos;
 
     private void Start()
@@ -29,7 +30,7 @@ public class GameManagerClase : MonoBehaviour
         sliderVolumen.onValueChanged.AddListener(ActualizarVolumen);
         if (puertaTorrePos != null)
         {
-            puertaTorrePos.SetActive(false); // Imagen1: desactivar al inicio
+            puertaTorrePos.SetActive(false); 
         }
 
         fondoClase.start();
@@ -70,7 +71,7 @@ public class GameManagerClase : MonoBehaviour
 
         if (totalCorrectPieces >= 8)
         {
-            if (puertaTorrePos != null)
+            if (puertaTorrePos != null && !puertaTorrePos.activeSelf)
             {
                 puertaTorrePos.SetActive(true); 
                 Debug.Log("PuertaTorre_pos activada.");
@@ -78,8 +79,12 @@ public class GameManagerClase : MonoBehaviour
             timer.StopTimer();
             scoreManager.StopScore();
             scoreScreen.SetActive(true);
-    Debug.Log("¡Se colocaron las 9 piezas correctamente! Timer detenido.");
         }
+    }
+
+    public void ReturnMenu()
+    {
+        menuReturn.SetActive(true);
     }
 
 }

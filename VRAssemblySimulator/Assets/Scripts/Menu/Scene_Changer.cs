@@ -6,9 +6,24 @@ using UnityEngine.SceneManagement;
 public class Scene_Changer : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void ChangeSceneByName(string sceneName)
+    public void LoadMenuScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void LoadLabScene()
+    {
+        SceneManager.LoadScene("Laboratorio");
+    }
+
+    public void LoadAssemblyScene()
+    {
+        SceneManager.LoadScene("Clase");
+    }
+
+    public void LoadPracticeScene()
+    {
+        SceneManager.LoadScene("Practice");
     }
 }
 

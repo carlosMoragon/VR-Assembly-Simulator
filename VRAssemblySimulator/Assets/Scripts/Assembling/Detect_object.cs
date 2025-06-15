@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Detect_object : MonoBehaviour
 {
@@ -14,13 +15,17 @@ public class Detect_object : MonoBehaviour
     {
         if (alreadyPlaced) return;
 
-        // Verifica si el tag del objeto que entra es igual al tag del objeto que contiene este script
         if (other.gameObject.tag == this.gameObject.tag)
         {
             other.transform.SetParent(transform);
             other.transform.localPosition = Vector3.zero;
 
-            // Desactiva el Rigidbody del objeto
+            XRGrabInteractable grab = other.gameObject.GetComponent<XRGrabInteractable>();
+            if (grab != null)
+            {
+                grab.enabled = false;
+            }
+
             Rigidbody rb = other.GetComponent<Rigidbody>();
             if (rb != null)
             {
@@ -33,8 +38,14 @@ public class Detect_object : MonoBehaviour
             }
 
             alreadyPlaced = true;
-
-            if (gameManager != null)
+            if(this.gameObject.tag == "PuertaTorre")
+            {
+                if(gameManager != null)
+                {
+                    gameManager.ReturnMenu();
+                }
+            }
+            else if (gameManager != null)
             {
                 gameManager.RegisterCorrectPiece();
             }

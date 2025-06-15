@@ -10214,10 +10214,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5203647555766584230}
         m_TargetAssemblyTypeName: Scene_Changer, Assembly-CSharp
-        m_MethodName: ChangeSceneByName
-        m_Mode: 5
+        m_MethodName: LoadAssemblyScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10635,7 +10635,7 @@ GameObject:
   - component: {fileID: 473129381907822226}
   - component: {fileID: 5203647555766584230}
   m_Layer: 0
-  m_Name: GameManager (1)
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11592,9 +11592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quit
-
-'
+  m_text: Salir
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11710,7 +11708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Practice
+  m_text: "Pr\xE1ctica"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12251,10 +12249,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5203647555766584230}
         m_TargetAssemblyTypeName: Scene_Changer, Assembly-CSharp
-        m_MethodName: ChangeSceneByName
-        m_Mode: 5
+        m_MethodName: LoadLabScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12489,8 +12487,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5203647555766584230}
         m_TargetAssemblyTypeName: Scene_Changer, Assembly-CSharp
-        m_MethodName: ChangeSceneByName
-        m_Mode: 5
+        m_MethodName: LoadPracticeScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

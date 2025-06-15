@@ -7,18 +7,19 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public float score = 100f;
-    public TextMeshPro scoreText; // UI para mostrar la puntuación
-    public float timePenaltyPerSecond = 100f / 300f; // ~0.333 por segundo
-    public float errorPenalty = 5f; // Penalización por error
+    public TextMeshPro scoreText; 
+    public float timePenaltyPerSecond = 100f / 300f; 
+    public float errorPenalty = 5f; 
     private bool isRunning = true;
 
     private void Start()
     {
         if (scoreText != null)
         {
-            scoreText.gameObject.SetActive(false); // Oculta el texto al iniciar
+            scoreText.gameObject.SetActive(false);
         }
     }
+
     void Update()
     {
         if (isRunning)
