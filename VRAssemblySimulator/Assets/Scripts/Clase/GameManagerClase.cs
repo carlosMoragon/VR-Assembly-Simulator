@@ -16,6 +16,7 @@ public class GameManagerClase : MonoBehaviour
     public int totalCorrectPieces = 0;
     public ScoreManager scoreManager;
     public GameObject scoreScreen;
+    public GameObject puertaTorrePos;
 
     private void Start()
     {
@@ -26,6 +27,10 @@ public class GameManagerClase : MonoBehaviour
         fondoClase.setVolume(Mathf.Clamp01(volumenGuardado / 100f));
         ActualizarTexto(volumenGuardado);
         sliderVolumen.onValueChanged.AddListener(ActualizarVolumen);
+        if (puertaTorrePos != null)
+        {
+            puertaTorrePos.SetActive(false); // Imagen1: desactivar al inicio
+        }
 
         fondoClase.start();
     }
@@ -63,8 +68,13 @@ public class GameManagerClase : MonoBehaviour
     {
         totalCorrectPieces++;
 
-        if (totalCorrectPieces >= 9)
+        if (totalCorrectPieces >= 8)
         {
+            if (puertaTorrePos != null)
+            {
+                puertaTorrePos.SetActive(true); 
+                Debug.Log("PuertaTorre_pos activada.");
+            }
             timer.StopTimer();
             scoreManager.StopScore();
             scoreScreen.SetActive(true);
