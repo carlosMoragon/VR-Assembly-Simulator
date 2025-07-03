@@ -54,4 +54,10 @@ public class GameManagerMenu : MonoBehaviour
     {
         valorVolumen.text = Mathf.RoundToInt(valor).ToString() + "%";
     }
+
+    public void ExitGame()
+    {
+        Debug.Log("Juego finalizado exitosamente.");
+        Application.Quit(); 
+    }
 }
