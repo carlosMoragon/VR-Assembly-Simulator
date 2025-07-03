@@ -2136,6 +2136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302974639}
   - component: {fileID: 302974640}
+  - component: {fileID: 302974641}
   m_Layer: 0
   m_Name: Agujero (2)
   m_TagString: Untagged
@@ -2173,12 +2174,26 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1306446, y: 0.12217905, z: 0.21142396}
   m_Center: {x: 0, y: 0, z: 0.09325811}
+--- !u!114 &302974641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302974638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f642d6093e1924aba8ec17a15260f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  libre: 1
+  tornilloAgarrado: {fileID: 0}
 --- !u!65 &304864845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15152,6 +15167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1553560862}
   - component: {fileID: 1553560863}
+  - component: {fileID: 1553560864}
   m_Layer: 0
   m_Name: Agujero (3)
   m_TagString: Untagged
@@ -15189,12 +15205,26 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1306446, y: 0.12217905, z: 0.21142396}
   m_Center: {x: 0, y: 0, z: 0.09325811}
+--- !u!114 &1553560864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553560861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f642d6093e1924aba8ec17a15260f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  libre: 1
+  tornilloAgarrado: {fileID: 0}
 --- !u!65 &1563188750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18089,6 +18119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1858078976}
   - component: {fileID: 1858078977}
+  - component: {fileID: 1858078978}
   m_Layer: 0
   m_Name: Agujero (1)
   m_TagString: Untagged
@@ -18126,12 +18157,26 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1306446, y: 0.12217905, z: 0.21142396}
   m_Center: {x: 0, y: 0, z: 0.09325811}
+--- !u!114 &1858078978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858078975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f642d6093e1924aba8ec17a15260f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  libre: 1
+  tornilloAgarrado: {fileID: 0}
 --- !u!1001 &1877520243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22117,7 +22162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4753702629715573185, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.803
+      value: 0.821
       objectReference: {fileID: 0}
     - target: {fileID: 4753702629715573185, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
       propertyPath: m_LocalPosition.z
