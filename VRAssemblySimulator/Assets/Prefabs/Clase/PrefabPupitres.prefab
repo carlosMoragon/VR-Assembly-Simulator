@@ -1095,7 +1095,6 @@ GameObject:
   - component: {fileID: 5844283084697578839}
   - component: {fileID: 7188798653842925081}
   - component: {fileID: 2669433958015401577}
-  - component: {fileID: 6633993072646055416}
   - component: {fileID: 7055840105237215059}
   m_Layer: 0
   m_Name: MesaSuperior
@@ -1169,28 +1168,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6633993072646055416
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6214805945750977853}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6626749027019192237, guid: e1b1ff9289ff3a44c9c437c6d41618ab, type: 3}
 --- !u!54 &7055840105237215059
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1472,7 +1449,6 @@ GameObject:
   - component: {fileID: 7602573707202419170}
   - component: {fileID: 977345380658390676}
   - component: {fileID: 7692515924218626954}
-  - component: {fileID: 8708190161772088025}
   - component: {fileID: 876006998433606565}
   m_Layer: 0
   m_Name: Respaldo
@@ -1546,28 +1522,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8708190161772088025
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8068702038888111834}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2365296953665211437, guid: 02143d3f6bf3e7c439a8920984cc622f, type: 3}
 --- !u!54 &876006998433606565
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1823,7 +1777,6 @@ GameObject:
   - component: {fileID: 6982768730514092397}
   - component: {fileID: 5825584893730530110}
   - component: {fileID: 2968123349101546535}
-  - component: {fileID: 5036212726624406043}
   - component: {fileID: 1802147752388520038}
   m_Layer: 0
   m_Name: Cajonera
@@ -1897,28 +1850,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5036212726624406043
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8954781190601608441}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8817045058096845534, guid: e1b1ff9289ff3a44c9c437c6d41618ab, type: 3}
 --- !u!54 &1802147752388520038
 Rigidbody:
   m_ObjectHideFlags: 0

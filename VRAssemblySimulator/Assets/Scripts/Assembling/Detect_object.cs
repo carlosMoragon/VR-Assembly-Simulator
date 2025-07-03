@@ -7,7 +7,7 @@ public class Detect_object : MonoBehaviour
 {
     private bool alreadyPlaced = false;
     private GameManagerClase gameManager;
-    private void Start()
+    private void Awake()
     {
         gameManager = FindObjectOfType<GameManagerClase>();
     }
