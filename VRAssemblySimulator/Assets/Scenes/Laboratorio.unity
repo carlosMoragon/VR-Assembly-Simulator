@@ -9392,7 +9392,11 @@ MonoBehaviour:
   punta: {fileID: 865411272}
   duracion: 2
   distancia: 0.14
-  opcionesMarcoPuerta: []
+  opcionesMarcoPuerta:
+  - {fileID: 360269734}
+  - {fileID: 1455831660}
+  - {fileID: 1655723979}
+  - {fileID: 2037092769}
   atraeScript: {fileID: 0}
 --- !u!65 &1908040777
 BoxCollider:

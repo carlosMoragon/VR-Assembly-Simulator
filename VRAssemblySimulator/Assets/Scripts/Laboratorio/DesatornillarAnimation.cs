@@ -23,6 +23,12 @@ public class DesatornillarAnimation : MonoBehaviour
 
         if (estado.posicion)
         {
+            Collider[] colliders = GetComponents<Collider>();
+            foreach (Collider col in colliders)
+            {
+                col.enabled = false;
+            }
+
             Rigidbody rbDestornillador = GetComponent<Rigidbody>();
             if (rbDestornillador != null)
                 rbDestornillador.useGravity = false;
@@ -148,6 +154,13 @@ public class DesatornillarAnimation : MonoBehaviour
     private void RestaurarDestornillador()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        
+        Collider[] colliders = GetComponents<Collider>();
+        foreach (Collider col in colliders)
+        {
+            col.enabled = true;
+        }
+
         if (rb != null)
             rb.useGravity = true;
 
