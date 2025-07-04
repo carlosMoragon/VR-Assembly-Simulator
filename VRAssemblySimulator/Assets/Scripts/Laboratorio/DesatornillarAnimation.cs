@@ -24,8 +24,8 @@ public class DesatornillarAnimation : MonoBehaviour
         if (estado.posicion)
         {
             Rigidbody rbDestornillador = GetComponent<Rigidbody>();
-            if (rbDestornillador != null)
-                rbDestornillador.useGravity = false;
+            
+            rbDestornillador.useGravity = false;
 
             Collider[] colliders = GetComponents<Collider>();
             foreach (Collider col in colliders)
