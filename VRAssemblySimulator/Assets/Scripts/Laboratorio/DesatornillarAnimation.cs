@@ -26,6 +26,7 @@ public class DesatornillarAnimation : MonoBehaviour
             Rigidbody rbDestornillador = GetComponent<Rigidbody>();
             
             rbDestornillador.useGravity = false;
+            rbDestornillador.isKinematic = true;
 
             Collider[] colliders = GetComponents<Collider>();
             foreach (Collider col in colliders)
@@ -162,8 +163,10 @@ public class DesatornillarAnimation : MonoBehaviour
         }
 
         if (rb != null)
+        {
             rb.useGravity = true;
-
+            rb.isKinematic = false;
+        }
         if (GetComponent<XRGrabInteractable>() == null)
             gameObject.AddComponent<XRGrabInteractable>();
     }
