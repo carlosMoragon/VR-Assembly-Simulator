@@ -16,7 +16,6 @@ public class GameManagerClase : MonoBehaviour
     private int totalCorrectPieces = 0;
     public ScoreManager scoreManager;
     public GameObject scoreScreen;
-    public GameObject menuReturn;
     public GameObject puertaTorrePos;
 
     private void Start()
@@ -80,11 +79,6 @@ public class GameManagerClase : MonoBehaviour
             scoreManager.StopScore();
             scoreScreen.SetActive(true);
         }
-    }
-
-    public void ReturnMenu()
-    {
-        menuReturn.SetActive(true);
     }
 
 }

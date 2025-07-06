@@ -38,14 +38,7 @@ public class Detect_object : MonoBehaviour
             }
 
             alreadyPlaced = true;
-            if(this.gameObject.tag == "PuertaTorre")
-            {
-                if(gameManager != null)
-                {
-                    gameManager.ReturnMenu();
-                }
-            }
-            else if (gameManager != null)
+            if (gameManager != null)
             {
                 gameManager.RegisterCorrectPiece();
             }
