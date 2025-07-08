@@ -13451,7 +13451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   punta: {fileID: 1277368625}
-  duracion: 2
+  duracion: 1
   distancia: 0.03494
   opcionesMarcoPuerta:
   - {fileID: 1521976219}
