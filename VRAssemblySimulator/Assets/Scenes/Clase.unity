@@ -21001,6 +21001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ventilacion Sistema
       objectReference: {fileID: 0}
+    - target: {fileID: 6820797971741197600, guid: e0e3a2a50eec4cc48a4e914507cdc0c9, type: 3}
+      propertyPath: m_TagString
+      value: Ventilador
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21053,6 +21057,10 @@ PrefabInstance:
     - target: {fileID: 4879992550115783016, guid: 9afa4245a3694ec4288d233ddcb59ad9, type: 3}
       propertyPath: m_Name
       value: Ventilacion_Sistema_GPU
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879992550115783016, guid: 9afa4245a3694ec4288d233ddcb59ad9, type: 3}
+      propertyPath: m_TagString
+      value: Refrigeracion
       objectReference: {fileID: 0}
     - target: {fileID: 8009564954207662076, guid: 9afa4245a3694ec4288d233ddcb59ad9, type: 3}
       propertyPath: m_LocalScale.x
