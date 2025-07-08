@@ -12,7 +12,6 @@ public class DetectorEtiquetas : MonoBehaviour
     private Collider objetoEntrado = null;
 
     private HashSet<string> etiquetasValidas = new HashSet<string> { "DiscoDuro", "CPU", "Fuente", "GPU", "PlacaBase", "RAM", "Refrigeracion", "UAlmacenamiento", "Ventilador" };
-    private Vector3 posicionDestinoObjetos = new Vector3(2.81f, 0.9592f, -0.6054f);
 
     void Start()
     {
@@ -69,8 +68,8 @@ public class DetectorEtiquetas : MonoBehaviour
 
         if (etiquetasValidas.Contains(other.tag))
         {
-            other.transform.position = posicionDestinoObjetos;
-            other.transform.rotation = Quaternion.Euler(270, 270, 0);
+            other.transform.position = transform.position;
+            other.transform.rotation = Quaternion.Euler(270, 180, 0);
         }
     }
 
