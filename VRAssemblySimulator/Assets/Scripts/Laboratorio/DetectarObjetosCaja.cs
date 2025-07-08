@@ -16,6 +16,8 @@ public class DetectarObjetosCaja: MonoBehaviour
     private Collider objetoEnCaja = null;
     private bool secuenciaEnCurso = false;
 
+    private List<string> tagsValidos = new List<string> { "Fuente", "RAM", "DiscoDuro", "PlacaBase", "Ventilador", "Refrigeracion", "GPU" };
+
     void Start()
     {
         StartCoroutine(MoverPuerta(posicionInicialLocal, posicionFinalLocal, duracionMovimiento));
@@ -41,7 +43,9 @@ public class DetectarObjetosCaja: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        objetoEnCaja = other;
+        if (tagsValidos.Contains(other.tag))
+            objetoEnCaja = other;
+
         tagObjetivo = objetoConScriptDetectarEtiqueta.GetComponent<DetectorEtiquetas>().ObtenerTagObjeto();
 
         if (!secuenciaEnCurso)

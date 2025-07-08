@@ -13,6 +13,8 @@ public class DetectorEtiquetas : MonoBehaviour
 
     private HashSet<string> etiquetasValidas = new HashSet<string> { "DiscoDuro", "CPU", "Fuente", "GPU", "PlacaBase", "RAM", "Refrigeracion", "UAlmacenamiento", "Ventilador" };
 
+    private List<string> tagsValidos = new List<string> { "Fuente", "RAM", "DiscoDuro", "PlacaBase", "Ventilador", "Refrigeracion", "GPU" };
+
     void Start()
     {
         transform.localPosition = posicionRelativaInicial;
@@ -63,8 +65,9 @@ public class DetectorEtiquetas : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        tagObjetoDetectado = other.tag;
-        objetoEntrado = other;
+        if (tagsValidos.Contains(other.tag))
+            tagObjetoDetectado = other.tag;
+            objetoEntrado = other;
 
         if (etiquetasValidas.Contains(other.tag))
         {
