@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class DetectarObjetosCaja: MonoBehaviour
@@ -18,8 +19,12 @@ public class DetectarObjetosCaja: MonoBehaviour
 
     private List<string> tagsValidos = new List<string> { "Fuente", "RAM", "DiscoDuro", "PlacaBase", "Ventilador", "Refrigeracion", "GPU" };
 
+    string escenaActual = null;
+
     void Start()
     {
+        escenaActual = SceneManager.GetActiveScene().name;
+
         StartCoroutine(MoverPuerta(posicionInicialLocal, posicionFinalLocal, duracionMovimiento));
     }
 
@@ -76,12 +81,14 @@ public class DetectarObjetosCaja: MonoBehaviour
 
         if (other != null && other.CompareTag(tagObjetivo))
         {
-            GameManager.instance.SumarAcierto();
+            if (escenaActual != "Practice")
+                GameManager.instance.SumarAcierto();
             Destroy(other.gameObject);
         }
         else
         {
-            GameManager.instance.SumarFallo();
+            if (escenaActual != "Practice")
+                GameManager.instance.SumarFallo();
         }
 
         yield return new WaitForSeconds(0.5f);
