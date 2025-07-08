@@ -18,7 +18,8 @@ public class Detect_object : MonoBehaviour
         if (other.gameObject.tag == this.gameObject.tag)
         {
             other.transform.SetParent(transform);
-            other.transform.localPosition = this.transform.localPosition;
+            other.transform.localPosition = Vector3.zero;
+            other.transform.localRotation = Quaternion.identity;
 
             XRGrabInteractable grab = other.gameObject.GetComponent<XRGrabInteractable>();
             if (grab != null)
