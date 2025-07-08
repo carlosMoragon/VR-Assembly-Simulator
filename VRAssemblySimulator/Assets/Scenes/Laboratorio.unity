@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028405, g: 0.22571416, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028419, g: 0.22571534, b: 0.30692333, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2115,6 +2115,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 413866366}
     m_Modifications:
+    - target: {fileID: -3498826375454074369, guid: 1c237203b73ca214f9a7dcd2949364ec, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3498826375454074369, guid: 1c237203b73ca214f9a7dcd2949364ec, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 757677787409797513, guid: 1c237203b73ca214f9a7dcd2949364ec, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.66589314
@@ -2460,6 +2468,14 @@ PrefabInstance:
     - target: {fileID: 3158896860360691378, guid: 7416efaf07aff434293a80af9318a7fb, type: 3}
       propertyPath: m_Name
       value: DiscoDuro (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680140644395440848, guid: 7416efaf07aff434293a80af9318a7fb, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680140644395440848, guid: 7416efaf07aff434293a80af9318a7fb, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3218,6 +3234,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 413866366}
     m_Modifications:
+    - target: {fileID: 138857365519321077, guid: e0e3a2a50eec4cc48a4e914507cdc0c9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 138857365519321077, guid: e0e3a2a50eec4cc48a4e914507cdc0c9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4520488104247236072, guid: e0e3a2a50eec4cc48a4e914507cdc0c9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.28479666
@@ -3827,6 +3851,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Refrigeracion
       objectReference: {fileID: 0}
+    - target: {fileID: 6630416885464630191, guid: 9afa4245a3694ec4288d233ddcb59ad9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630416885464630191, guid: 9afa4245a3694ec4288d233ddcb59ad9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8009564954207662076, guid: 9afa4245a3694ec4288d233ddcb59ad9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1635227
@@ -4195,6 +4227,14 @@ PrefabInstance:
     - target: {fileID: 3158896860360691378, guid: 7416efaf07aff434293a80af9318a7fb, type: 3}
       propertyPath: m_Name
       value: DiscoDuro (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680140644395440848, guid: 7416efaf07aff434293a80af9318a7fb, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680140644395440848, guid: 7416efaf07aff434293a80af9318a7fb, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4610,6 +4650,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 413866366}
     m_Modifications:
+    - target: {fileID: -2502071579498915857, guid: 27bdc0fdfc3b4284f8925ea3779b6e99, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2502071579498915857, guid: 27bdc0fdfc3b4284f8925ea3779b6e99, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1673481117897231014, guid: 27bdc0fdfc3b4284f8925ea3779b6e99, type: 3}
       propertyPath: m_Name
       value: GPU
@@ -7726,6 +7774,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 413866366}
     m_Modifications:
+    - target: {fileID: -6625675174519847968, guid: 1b84060633128554784d62e2b86bbef2, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6625675174519847968, guid: 1b84060633128554784d62e2b86bbef2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 193196900475174013, guid: 1b84060633128554784d62e2b86bbef2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.846656
@@ -7866,6 +7922,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 413866366}
     m_Modifications:
+    - target: {fileID: -3336797926885718891, guid: af2e0ca12a988704e8e4fb8fa5453c82, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3336797926885718891, guid: af2e0ca12a988704e8e4fb8fa5453c82, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 787737400022042601, guid: af2e0ca12a988704e8e4fb8fa5453c82, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0778635
