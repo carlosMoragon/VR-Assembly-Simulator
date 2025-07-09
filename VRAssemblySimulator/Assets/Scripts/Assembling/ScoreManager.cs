@@ -35,7 +35,7 @@ public class ScoreManager : MonoBehaviour
 
         if (scoreText != null)
         {
-            scoreText.gameObject.SetActive(true); // Mostrar texto al final
+            scoreText.gameObject.SetActive(true); 
             UpdateScoreText(); 
         }
     }
@@ -43,8 +43,7 @@ public class ScoreManager : MonoBehaviour
     public void PenalizeError()
     {
         score -= errorPenalty;
-        score = Mathf.Max(score, 0); // Evita que sea negativa
-        UpdateScoreText();
+        score = Mathf.Max(score, 0); 
     }
 
     void UpdateScoreText()
