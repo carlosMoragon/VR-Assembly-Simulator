@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.38872126, g: 0.74332625, b: 0.9833995, a: 1}
+  m_IndirectSpecularColor: {r: 0.38938192, g: 0.7457206, b: 0.9687726, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17261,14 +17261,13 @@ MonoBehaviour:
   fallosText: {fileID: 0}
   piezasParaAcertar:
   - {fileID: 173410963}
-  - {fileID: 0}
+  - {fileID: 173410969}
   - {fileID: 173410965}
   - {fileID: 173410966}
   - {fileID: 173410967}
   - {fileID: 173410979}
   - {fileID: 173410980}
-  - {fileID: 0}
-  - {fileID: 173410969}
+  - {fileID: 667044629}
   sliderVolumen: {fileID: 1661051581}
   valorVolumen: {fileID: 1062229190}
   timer: {fileID: 0}

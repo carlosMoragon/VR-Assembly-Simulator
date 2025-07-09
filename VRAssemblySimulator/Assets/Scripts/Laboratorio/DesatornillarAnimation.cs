@@ -43,7 +43,6 @@ public class DesatornillarAnimation : MonoBehaviour
             Vector3 nuevaPosicion = other.transform.position + new Vector3(0f, 0f, 0.24f);
             transform.position = nuevaPosicion;
 
-            // BLOQUEO AÑADIDO DEL EJE Y
             rbDestornillador.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
 
             if (estado.atornillado)
