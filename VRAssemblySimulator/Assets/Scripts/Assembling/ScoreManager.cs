@@ -26,7 +26,6 @@ public class ScoreManager : MonoBehaviour
         {
             score -= timePenaltyPerSecond * Time.deltaTime;
             score = Mathf.Max(score, 0); // No bajar de 0
-            UpdateScoreText();
         }
     }
 
@@ -37,7 +36,7 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.gameObject.SetActive(true); // Mostrar texto al final
-            UpdateScoreText(); // Asegura que se actualice con el valor final
+            UpdateScoreText(); 
         }
     }
 
