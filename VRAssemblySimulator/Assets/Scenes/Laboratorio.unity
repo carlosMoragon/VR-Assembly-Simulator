@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028405, g: 0.22571416, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028459, g: 0.22571498, b: 0.30692363, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5769,6 +5769,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 822455949144062580, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093907038172663914, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2253399696014809135, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2160001
@@ -5809,6 +5817,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2960733180030583011, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381837176571085905, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4753702629715573185, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.895
@@ -5824,6 +5840,22 @@ PrefabInstance:
     - target: {fileID: 6144835882694198656, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
       propertyPath: m_Name
       value: Torre
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368901994755466655, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656114323384401880, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748154939306890085, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773929905894193879, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5108546845698364051, guid: 7aa6d2b07ed603b4194c778c1ed0dc1b, type: 3}
